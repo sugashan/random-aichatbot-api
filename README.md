@@ -13,3 +13,9 @@ yarn build
 ```
 
 to bundle your application
+
+Swagger URL
+http://localhost:3000/api/docs/#/
+
+By Default streaming supported. Check ```test env``` file.
+terminal streaming is added for testing.
