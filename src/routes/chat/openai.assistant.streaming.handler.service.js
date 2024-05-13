@@ -59,7 +59,8 @@ class AssistantStreamingEventHandler extends EventEmitter {
                 const weatherDataResponse = await getWeatherHistoryData(
                   arugments['location'],
                 );
-                output = JSON.stringify(weatherDataResponse.data.days);
+                console.log('API Response: ' + weatherDataResponse.status);
+                output = JSON.stringify(weatherDataResponse.data);
               } catch (error) {
                 console.log(error);
                 output =

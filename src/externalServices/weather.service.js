@@ -22,8 +22,9 @@ export const getWeatherHistoryData = async (location) => {
       ' to: ' +
       todayDate,
   );
+  // rest/services/timeline/${location}/${startDate}/${todayDate}
   return http.get(
-    `rest/services/timeline/${location}/${startDate}/${todayDate}`,
+    `/v1/history.json?q=${location}&dt=${startDate}&end_dt=${todayDate}`,
     {
       params: {
         key: process.env.WEATHER_API_KEY,

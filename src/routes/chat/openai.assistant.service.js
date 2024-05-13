@@ -139,7 +139,8 @@ const initConversation = async (userQuestion, res) => {
       threadId,
       {
         assistant_id: assistantId,
-        instructions: 'response_format of type should be json_object',
+        instructions:
+          'it should only include a past 14 day summary of given weather data in the location',
       },
       eventHandler,
     );
